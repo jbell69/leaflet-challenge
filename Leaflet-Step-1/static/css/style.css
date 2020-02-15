@@ -14,3 +14,19 @@ html {
 h1 {
   text-align: center;
 }
+.legend {
+  display: block;
+  background-color: white;
+  min-width: 80px;
+}
+
+.legendColor {
+  padding-left: 10px;
+  display: inline-block;
+  min-width: 50px;
+  min-height: 10px;
+}
+
+.legendLabel {
+  display: inline-block;
+}

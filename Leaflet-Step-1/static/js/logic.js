@@ -65,16 +65,14 @@ function createFeatures(data) {
     var labels = [];
 
     // Add min & max
-    var legendInfo = "<h1>Median Income</h1>" +
-      "<div class=\"labels\">" +
-      "<div>" + magLabel[0] + "</div>" +
-      "<div>" + magLabel[magLabel.length - 1] + "</div>" +
-      "</div>";
+    // var legendInfo = "<h1>Median Income</h1>" +
+    //   "<div class=\"magLabel\">" +
+    //   "<div>" + magLabel + "</div>";
 
-    div.innerHTML = legendInfo;
-
+    // div.innerHTML = legendInfo;
+    console.log(magLabel)
     magLabel.forEach(function (magLabel, index) {
-      labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+      labels.push('<div class="legendLabel">' + magLabel + '</div>' + "<div class= 'legendColor' style=\"background-color: " + colors[index] + "\"></div> <br>");
     });
 
     div.innerHTML += "<ul>" + labels.join("") + "</ul>";
@@ -83,16 +81,17 @@ function createFeatures(data) {
 
   // Adding legend to the map
   legend.addTo(myMap);
-//   for (var i = 0; i < colors.length; i++) {
-//     div.innerHTML +=
-//       '<li style="background-color:' + colors[i] + '">' + magLabel[i] + '</li>';
-//   }
-//   div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-//   return div;
-// }
 
-// // Adding legend to the map
-// legend.addTo(myMap);
+  //   for (var i = 0; i < colors.length; i++) {
+  //     div.innerHTML +=
+  //       '<li style="background-color:' + colors[i] + '">' + magLabel[i] + '</li>';
+  //   }
+  //   div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+  //   return div;
+  // }
+
+  // // Adding legend to the map
+  // legend.addTo(myMap);
 
 }
 
